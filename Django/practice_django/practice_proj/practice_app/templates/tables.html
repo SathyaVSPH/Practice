@@ -5,13 +5,21 @@
         <meta name="viewport" content="width= device-width, initial-scale= 1.0">
         <title>My First Table</title>
         <style>
-            table, tr, td, th{
+            table, tr, td, th {
                 color: white;
                 border: 3px solid black;
                 border-collapse: collapse;
-                background-color: rgb(4, 99, 7);
+                /*background-color: rgb(4, 99, 7);*/
             }
             
+            tr:nth-child(even) {
+                background-color: brown;
+            }
+
+            tr:nth-child(odd) {
+                background-color: rgb(4, 99, 7);
+            }
+
             body {
                 background-color: black;
             }
@@ -27,7 +35,7 @@
             <caption>My First Table</caption>
             <tr>
                 <th>S.No.</th>
-                /* Here the th element takes 50% of its parent ie table as its font-size */
+                
                 <th style="width: 50%">First Name</th>
                 <th style="width: 50%">Last Name</th>
             </tr>
