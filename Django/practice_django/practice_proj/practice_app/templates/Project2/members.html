@@ -1,0 +1,11 @@
+{% extends 'Project2/master.html' %}
+
+{% block title %} Members List {% endblock %}
+
+{% block content %}
+<ul>
+    {% for member in members_list %}
+    <li>{{member.f_name}} {{member.l_name}}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
