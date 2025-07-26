@@ -6,6 +6,8 @@
         <title>
             {% block title %} {% endblock %}
         </title>
+        {% block extra_head_css %}
+        {% endblock %}
     </head>
     <body>
         {% block content %} {% endblock %}
