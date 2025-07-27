@@ -9,9 +9,31 @@
 {% block title %} Members List {% endblock %}
 
 {% block content %}
+<!--
 <ul>
     {% for member in members_list %}
     <li>{{member.f_name}} {{member.l_name}}</li>
     {% endfor %}
-</ul>
+</ul>-->
+<table border="3">
+    <caption>Members</caption>
+    <thead>
+        <tr>
+            <th>S.No.</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Age</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for member in members_list %}
+        <tr>
+            <td>{{member.id}}</td>
+            <td>{{member.f_name}}</td>
+            <td>{{member.l_name}}</td>
+            <td>{{member.age}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
 {% endblock %}
