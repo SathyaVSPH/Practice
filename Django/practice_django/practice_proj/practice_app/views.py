@@ -21,6 +21,6 @@ def project1(request):
 def members(request):
     all_members = Member.objects.all().values()
     context = {
-        'members_list' : all_members
+        'members_list' : all_members,
     }
     return render(request, 'Project2/members.html', context)
