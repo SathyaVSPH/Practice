@@ -40,7 +40,7 @@
 <p style='font-weight: bold;'>Members</p>
 <ul>
     {% for member in members_list %}
-    <li>{{member.f_name}} {{member.l_name}}</li>
+    <li><a href="details/{{member.id}}">{{member.f_name}} {{member.l_name}}</a></li>
     {% endfor %}
 </ul>
 {% endblock %}

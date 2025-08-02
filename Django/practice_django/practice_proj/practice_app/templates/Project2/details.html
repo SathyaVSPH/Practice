@@ -1,0 +1,15 @@
+{% extends "Project2/master.html" %}
+
+{% block title %} Member Details {% endblock %}
+
+{% block content %}
+<p style="font-size: 15px; font-weight: bold;
+text-align: center;
+text-decoration-line: underline;
+text-decoration-color: black;
+text-decoration-thickness: 3px;
+text-decoration-style: wavy;">{{member.f_name}} {{member.l_name}}</p>
+
+<p style="font-size: 10px;">Age: {{member.age}}</p>
+
+{% endblock %}
