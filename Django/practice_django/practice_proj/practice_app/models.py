@@ -10,3 +10,9 @@ class Member(models.Model):
 
     def __str__(self):
         return f'Name: {self.f_name} {self.l_name}\nAge: {self.age}'
+
+class Post(models.Model):
+    title = models.CharField(max_length=70)
+    body = models.TextField()
+    slug = models.SlugField()
+    date = models.DateTimeField(auto_now_add=True)
