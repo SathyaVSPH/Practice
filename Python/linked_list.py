@@ -31,6 +31,7 @@ class Linked_List:
         """Prints all the elements in the Linked List"""
         if not self.head:
             return print("The Linked List is empty")
+        
         current = self.head
         while current:
             print(current.data, end = " -> ")
@@ -41,6 +42,7 @@ class Linked_List:
         """Inserts the element at the specified index"""
         if not self.head:
             return self.append(data)
+        
         current = self.head
         current_idx = 0
         while current:
@@ -58,10 +60,12 @@ class Linked_List:
         """Deletes the data from the Linked List"""
         if not self.head:
             return 'The Linked List is Empty'
+        
         if self.head.data == data:
             self.head = self.head.next
             self.size -= 1
             return f'Deleted {data}'
+        
         current = self.head
         while current.next:
             if current.next.data == data:
