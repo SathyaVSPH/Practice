@@ -1,0 +1,131 @@
+<!--Pagination, Stretch, 3D Click, Margin and Padding together-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+			.navigation {
+				padding-top: 8px;
+				padding-bottom: 8px;
+				padding-left: 5px;
+				padding-right: 5px;
+			}
+
+			.stretch {
+				padding-top: 6px;
+				padding-bottom: 6px;
+				padding-left: 12px;
+				padding-right: 12px;
+				background-color: green;
+				color: white;
+				border: none;
+				font-weight: 500;
+				cursor: pointer;
+				transition: padding 0.25s;
+			}
+
+			.stretch:hover {
+				padding-top: 18px;
+				padding-bottom: 18px;
+				padding-left: 36px;
+				padding-right: 36px;
+			}
+
+			.pages {
+				text-decoration: underline;
+				color: blueviolet;
+				background-color: white;
+				border: none;
+				margin-right: 0px;
+			}
+
+			.click {
+				padding-top: 6px;
+				padding-bottom: 6px;
+				padding-left: 12px;
+				padding-right: 12px;
+				background-color: green;
+				color: white;
+				border: none;
+				font-weight: 500;
+				cursor: pointer;
+				transition: box-shadow 0.15s;
+			}
+
+			.click:hover {
+				box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7)
+			}
+
+			.nums {
+				padding-top: 6px;
+				padding-bottom: 6px;
+				padding-left: 12px;
+				padding-right: 12px;
+				background-color: green;
+				color: white;
+				border: none;
+				font-weight: 500;
+				cursor: pointer;
+				margin-right: 10px;
+				margin-left: 10px;
+				transition: padding 0.15s, margin 0.15s;
+			}
+
+			.nums:hover {
+				padding-left: 22px;
+				padding-right: 22px;
+				/*Trick here is to add padding and margin values to achieve this*/
+				margin-left: 0px;
+				margin-right: 0px;
+			}
+
+		</style>
+  </head>
+	<body>
+		<h1>Pagination</h1>
+		<button class="navigation">
+			Back
+		</button>
+		<button class="pages">
+			1
+		</button>
+		<button class="pages">
+			2
+		</button>
+		<button class="pages">
+			3
+		</button>
+		<button class="pages">
+			4
+		</button>
+		<button class="pages">
+			5
+		</button>
+		<button class="navigation">
+			Next
+		</button>
+
+		<h1>Stretch</h1>
+		<button class="stretch">
+			Stretch
+		</button>
+
+		<h1>3D Click</h1>
+		<button class="click">
+			Shadow
+		</button>
+
+		<h1>Margin and padding together</h1>
+		<button class="nums">
+			One
+		</button>
+
+		<button class="nums">
+			Two
+		</button>
+
+		<button class="nums">
+			Three
+		</button>
+
+	</body>
+</html>
