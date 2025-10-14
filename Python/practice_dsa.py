@@ -123,5 +123,36 @@ class QueueViaLL:
 		
 	def dequeue(self):
 		if not self.isEmpty():
-			removed = self.first
+			if self.size == 1:
+				self.first, self.head = None, None
+				self.size = 0
+			else:
+				removed = self.first
+				self.first = self.first.next
+				self.size -= 1
+		else:
+			return print("The Queue is Empty")
+	
+	def traverse(self):
+		"""Traversing through all the elements in the Queue"""
+		if not self.isEmpty():
+			if not self.size == 1:
+				current_node = self.first
+				print('Traversing through the Queue')
+				while current_node:
+					print(current_node.value, end = " -> ")
+					current_node = current_node.next
+				print("None")
+			else:
+				print("Traversing through the queue")
+				print(self.first.value)
+		else:
+			return print("The Queue is empty")
+
+	def peek(self):
+		if not self.isEmpty():
+			return self.first.value
+		return "The Queue is empty"
+
+			
 			
