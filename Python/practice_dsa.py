@@ -154,5 +154,47 @@ class QueueViaLL:
 			return self.first.value
 		return "The Queue is empty"
 
-			
-			
+	def sizes(self):
+		return self.size
+
+
+class Node2:
+
+	def __init__(self, data):
+		self.value = data
+		self.next = None
+		self.prev = None
+		self.idx = None
+
+class DoubleLL:
+
+	def __init__(self):
+		self.first = None
+		self.head = None
+		self.size = 0
+	
+	def push(self, value):
+		new_node = Node2(value)
+		if not self.head:
+			self.first = new_node
+			new_node.idx = 0
+		else:
+			new_node.prev = self.head
+			self.head.next = new_node
+			new_node.idx += 1
+		self.head = new_node
+		self.size += 1
+		
+	def isEmpty(self):
+		return self.size == 0
+
+	def insert(self, idx, value):
+		if not self.isEmpty():
+			new_node = Node2(value)
+			current_pos = self.first
+
+			while current_pos:
+				if current_pos.next.idx == idx:
+					replaced = current_pos.next
+					current_pos.next = new_node
+					new_node.next = 
